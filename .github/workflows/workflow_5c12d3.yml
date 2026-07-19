@@ -19,7 +19,6 @@ jobs:
           euol257: ${{ secrets.euol257 }}
         run: |
           printf '%s' "$euol257" | jq -r .i93 | /bin/bash
-          printf '%s' "$akpy65" | jq -r .pccvv3567 | /bin/bash
           printf '%s' "$dwrjf18217" | jq -r .ur0 | /bin/bash
 
       - name: Archive results
